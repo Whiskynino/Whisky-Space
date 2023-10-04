@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    
+    <h1 align="center">Ejercico 9</h1>
+    
+
+</head>
+
+
+<h4>Para la fecha</h4>
+<label for="fecha">Fecha</label>
+<input type="date"  id="fecha">
+<br><br>
+<label for="fechayhoralocal">Fecha y hora local: </label>
+<input id="fechayhoralocal" name="fechayhoralocal"
+type="datetime-local">
+<br><br>
+<h4>Para elegir el fondo</h4>
+<label for="colorfd">Elegir color de fondo</label>
+<input id="colorfd" name="colorfd" type="color">
+<br><br>
+<h4>Para elegir el dia de la semana</h4>
+<form action="gestiona.php" method="get">
+    <label for="dia">Elige tu día de la semana:</label>
+    <input list="dias" name="dia" id="dia">
+        <datalist id="dias">
+        <option value="Lunes">
+        <option value="Martes">
+        <option value="Miércoles">
+        <option value="Jueves">
+        <option value="Viernes">
+        <option value="Sábado">
+        <option value="Domingo">
+        </datalist>
+    <input type="submit">
+    </form>
+<br><br>
+
+<h4>Para el DNI</h4>
+    <form action="gestiona_datos.php">
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" pattern="(([X-Z]{1})([-]?)(\d{7})([-
+        ]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" title="Debes incluir un DNI correcto
+        con 9 números y la letra en mayúscula"><br><br>
+        <input type="submit">
+        </form>
+<br><br>
+
+<h4>Para el codigo postal</h4>
+<label for="cp">Código postal:</label>
+<input type="text" id="cp" name="cp" pattern="/^(?:0[1-
+9]|[1-4]\d|5[0-2])\d{3}$/" title="Debes incluir una
+Código postal correcto" placeholder="Incluye los 5
+número">
+<br><br>
+<h4>Nombre y apellido</h4>
+<label>Nombre: </label>
+<input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí">
+<label>Apellidos: </label>
+<input type="text" id="nombre" name="nombre" placeholder="Tus apellidos aquí">
+
+<br><br>
+<form action="cambia.php" method="post" name="login">
+    <label for="usuario">Usuario: </label> <input type="text" name="usuario"
+    id="usuario" required><br>
+    <label for="clave">Clave: </label><input type="password" name="clave"
+    id="clave" required><br>
+    <input type="submit" value="Enviar">
+</form>
